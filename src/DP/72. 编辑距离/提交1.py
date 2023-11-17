@@ -1,5 +1,5 @@
 # 考虑前i个字符串匹配前j个字符串的最小操作
-# 插入操作dfs(i,j) = dfs(i,j-1) + 1 例horse末尾插入s，与ros末尾匹配，则s抵消掉，转变为horse匹配ros，即dfs(i,j-1)
+# 插入操作dfs(i,j) = dfs(i,j-1) + 1 例horse末尾插入s，与ros末尾匹配，则s抵消掉，转变为horse匹配ro，即dfs(i,j-1)
 # 删除操作dfs(i,j) = dfs(i-1,j) + 1 例horse删除e，转变为hors匹配ros,即dfs(i-1,j)
 # 替换操作dfs(i,j) = dfs(i-1,j-1) + 1 例 horse末尾替换为s，与ros末尾s抵消，转变为hors匹配ro，即dfs(i-1,j-1)
 # 如果s[i] == t[j]，不进行操作，递归到dfs(i-1,j-1)
